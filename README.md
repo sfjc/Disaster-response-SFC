@@ -5,15 +5,17 @@ by S John Cody
 
 ## Dataset and motivation
 
-The Seattle airbnb dataset contains 1.4 million entries relating to listings for airbnb properties in the area of Seattle.
-https://www.kaggle.com/airbnb/seattle/data
-
-As both renter or landlord, people are looking to get the best out of property rentals. I look into the data that may 
-reveal key clues and trends.
+This analyzes disaster data from Appen to build a model for an API that classifies disaster messages.
 
 ## Files
 
-calendar.csv (1393570 entries, describes availability)
+ETL_SFC.py 
+
+This:
+    Loads the messages and categories datasets
+    Merges the two datasets
+    Cleans the data
+    Stores it in a SQLite database
 
 listings.csv (3818 entries, describes individual properties)
 
