@@ -41,9 +41,12 @@ run_SFC_3.py
     
 1. Run the following commands in the project's root directory
 
-    - To run ETL pipeline that cleans data and stores in database
+ To run ETL pipeline that cleans data and stores in database
+ 
         `python data/ETL_SFC.py data/disaster_messages.csv data/disaster_categories.csv data/response.db`
-    - To run ML pipeline that trains classifier and saves
+        
+ To run ML pipeline that trains classifier and saves
+ 
         `python models/ML_SFC_3.py data/response.db models/classifier.pkl`
 
 2. Go to `app` directory: `cd app`
