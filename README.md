@@ -5,30 +5,60 @@ by S John Cody
 
 ## Dataset and motivation
 
-This analyzes disaster data from Appen to build a model for an API that classifies disaster messages.
+This project analyzes disaster data from Appen to build a model for an API that classifies disaster messages.
 
 ## Files
 
 ETL_SFC.py 
 
-This:
+This Python script:
     Loads the messages and categories datasets
     Merges the two datasets
     Cleans the data
     Stores it in a SQLite database
 
-listings.csv (3818 entries, describes individual properties)
+ML_SFC_3.py
 
-reviews.csv (84849 entries, gives renter reviews)
+This Python script is a machine learning pipeline that:
 
-## Summary of Findings
+    Loads data from the SQLite database
+    Splits the dataset into training and test sets
+    Builds a text processing and machine learning pipeline
+    Trains and tunes a model using GridSearchCV
+    Outputs results on the test set
+    Exports the final model as a pickle file
+    
+run_SFC_3.py
 
-We see in this data, among other things, that the weekly cyclical variations in airbnb bookings diminish through the year 2016, that there are 
-two huge drops in availability that may be related to significant events, and that overall availability increases towards the end of the year. There 
-is a (very weak) positive association between cancellation policy and average price, and we find the ten words in property summaries most associated 
-with higher prices.
+    This is a web app where an emergency worker can input a new message and get 
+    classification results in several categories.
+    The web app displays visualizations of the data.
+
+## IDE process:
+    
+### Instructions:
+    
+1. Run the following commands in the project's root directory
+
+    - To run ETL pipeline that cleans data and stores in database
+        `python data/ETL_SFC.py data/disaster_messages.csv data/disaster_categories.csv data/response.db`
+    - To run ML pipeline that trains classifier and saves
+        `python models/ML_SFC_3.py data/response.db models/classifier.pkl`
+
+2. Go to `app` directory: `cd app`
+
+3. Run the web app: `run_SFC_3.py`
+
+4. Click the `PREVIEW` button to open the homepage
+
+
+
+
+
+
 
 ## Acknowledgements
 
-Would like to acknowledge airbnb for making this data available.
+Would like to acknowledge Appen for making this useful data available.
+
 
