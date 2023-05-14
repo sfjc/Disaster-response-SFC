@@ -12,6 +12,7 @@ This project analyzes disaster data from Appen to build a model for an API that 
 ETL_SFC.py 
 
 This Python script:
+
     Loads the messages and categories datasets
     Merges the two datasets
     Cleans the data
