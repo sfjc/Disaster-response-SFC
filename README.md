@@ -2,6 +2,8 @@
 # Disaster response ML pipeline project
 by S John Cody
 
+https://github.com/sfjc/Disaster-response-SFC
+
 
 ## Dataset and motivation
 
